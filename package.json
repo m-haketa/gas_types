@@ -1,0 +1,22 @@
+{
+  "name": "type_git",
+  "version": "1.0.0",
+  "description": "GAS-Clasp ライブラリ自動補完",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/m-haketa/gas_types.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/m-haketa/gas_types/issues"
+  },
+  "homepage": "https://github.com/m-haketa/gas_types#readme",
+  "devDependencies": {
+    "@types/google-apps-script": "0.0.46"
+  }
+}
