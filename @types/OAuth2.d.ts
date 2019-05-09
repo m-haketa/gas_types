@@ -10,10 +10,11 @@ interface TokenPayload {
   grant_type: string
 }
 
-//type TOKEN_FORMAT = 'application/json' | 'application/x-www-form-urlencoded' 
+//type TOKEN_FORMAT = 'application/json' | 'application/x-www-form-urlencoded'
 
 declare class OAuth2 {
   public static createService(serviceName: string): OAuth2
+  public static getRedirectUri(optScriptId: string): string
 
   public setAuthorizationBaseUrl(authorizationBaseUrl: string): OAuth2
   public setTokenUrl(tokenUrl: string): OAuth2
@@ -42,24 +43,26 @@ declare class OAuth2 {
 
   //any -> 本来はLockService.Lock だが書き方がわからない。GoogleAppsScript.Lock.Lock?
   public setLock(lock: any): OAuth2
-  
+
   // 引数の型が合っているか不明
   public setScope(scope: string[], optSeparator: string): OAuth2
 
   public setParam(name: string, value: string): OAuth2
   public setPrivateKey(privateKey: string): OAuth2
   public setIssuer(issuer: string): OAuth2
-  
+
   // 引数の型が合っているか不明
-  public setAdditionalClaims(additionalClaims: { [key: string]: string }): OAuth2
-  
+  public setAdditionalClaims(additionalClaims: {
+    [key: string]: string
+  }): OAuth2
+
   public setSubject(subject: string): OAuth2
   public setExpirationMinutes(expirationMinutes: string): OAuth2
   public setGrantType(grantType: string): OAuth2
   public setRedirectUri(redirectUri: string): OAuth2
   public getRedirectUri(): string
 
-  // any -> 本来は{Object} optAdditionalParameters Additional parameters that should be stored in the state token and made available in the callback function 
+  // any -> 本来は{Object} optAdditionalParameters Additional parameters that should be stored in the state token and made available in the callback function
   public getAuthorizationUrl(optAdditionalParameters?: any): string
 
   // any -> 本来は{Object} callbackRequest The request data recieved from the callback
