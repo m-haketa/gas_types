@@ -4,7 +4,7 @@
 //
 // 事前に下記を実行する必要あり
 // npm install underscore
-// nom install @types/underscore
+// npm install @types/underscore
 
 declare namespace Underscore {
   function load(): _.UnderscoreStatic
