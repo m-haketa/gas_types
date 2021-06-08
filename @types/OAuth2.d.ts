@@ -44,7 +44,7 @@ declare class OAuth2 {
   //any -> 本来はLockService.Lock だが書き方がわからない。GoogleAppsScript.Lock.Lock?
   public setLock(lock: any): OAuth2
 
-  public setScope(scope: string|string[], optSeparator?: string): OAuth2
+  public setScope(scope: string | string[], optSeparator?: string): OAuth2
 
   public setParam(name: string, value: string): OAuth2
   public setPrivateKey(privateKey: string): OAuth2
